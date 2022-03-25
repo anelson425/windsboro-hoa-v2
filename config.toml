@@ -1,4 +1,22 @@
 baseURL = "https://anelson425.github.io/windsboro-hoa-v2"
 languageCode = "en-us"
-title = "Windsboro V2"
-theme = "ananke"
+title = "Windsboro"
+theme = "hoa"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+  [[menu.main]]
+    pre = "facebook"
+    url = "https://www.facebook.com/groups/windsboro.hoa/"
+    weight = 4
