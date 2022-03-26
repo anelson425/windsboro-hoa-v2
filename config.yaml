@@ -1,0 +1,20 @@
+baseURL: 'https://anelson425.github.io/windsboro-hoa-v2'
+languageCode: en-us
+title: Windsboro
+theme: hoa
+params:
+  masthead: images/header_windsboro.jpg
+menu:
+  main:
+    - name: Links
+      link: /links
+    - name: HOA
+      link: /hoa
+    - name: Contacts
+      link: /contacts
+    - name: About Us
+      link: /about_us
+    - name: Amenities
+      link: /amenities
+    - name: Gallery
+      link: /gallery

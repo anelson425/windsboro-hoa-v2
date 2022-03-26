@@ -1,14 +1,30 @@
-<div id="nav-border" class="container">
-    <nav id="nav" class="nav justify-content-center">
-        {{ range .Site.Menus.main }}
-        <a class="nav-link" href="{{ .URL }}">
-        {{ if .Pre }}
-        {{ $icon := printf "<i data-feather=\"%s\"></i> " .Pre | safeHTML }}
-        {{ $icon }}
-        {{ end }}
-        {{ $text := print .Name | safeHTML }}
-        {{ $text }}
-        </a>
-        {{ end }}
-    </nav>
+<!-- Background image -->
+<div
+class="bg-image"
+style="
+    background-image: url( {{.Site.Params.masthead }} );
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    height: 300px;
+"
+>
 </div>
+
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#">Windsboro HOA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ms-auto">
+                {{ range .Site.Menus.main }}
+                {{ $name := print .Name | safeHTML }}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"> {{ $name }} </a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</nav>
