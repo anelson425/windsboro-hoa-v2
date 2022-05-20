@@ -1,8 +1,9 @@
 <!-- Background image -->
+
 <div
 class="bg-image"
 style="
-    background-image: url( {{.Site.Params.masthead }} );
+    background-image: url( {{ .Site.Params.masthead }} );
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center center;
@@ -12,16 +13,15 @@ style="
 
 <nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark bg-success">
     <div class="container">
-        <a class="navbar-brand" href="#">Windsboro HOA</a>
+        <a class="navbar-brand" href= {{ .Site.BaseURL }}> {{ .Site.Title }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="main_nav">
             <ul class="navbar-nav ms-auto">
                 {{ range .Site.Menus.main }}
-                {{ $name := print .Name | safeHTML }}
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> {{ $name }} </a>
+                        <a class="nav-link" href="{{ .URL}}"> {{ .Name }} </a>
                     </li>
                 {{ end }}
             </ul>
