@@ -1,9 +1,10 @@
 <!-- Background image -->
+{{ $masthead := resources.Get .Site.Params.masthead }}
 
 <div
 class="bg-image"
 style="
-    background-image: url( {{ .Site.Params.masthead }} );
+    background-image: url( {{ $masthead.RelPermalink}} );
     background-repeat: no-repeat; 
     background-size: cover; 
     background-position: center center;
