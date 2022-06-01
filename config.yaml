@@ -8,14 +8,23 @@ menu:
   main:
     - name: Links
       url: /links
-    - name: HOA
-      url: /hoa
+    - name: Documents
+      url: /documents
     - name: Contacts
       url: /contacts
-    - name: About Us
-      url: /about_us
-    - name: Amenities
-      url: /amenities
+    - name: Pool
+      url: /pool
+    - name: Ponds
+      url: /ponds
     - name: Gallery
       url: /gallery
+    - name: HOA Dues
+      url: /hoa_dues
+    - name: Calendar
+      url: /calendar
 copyright: Windsboro HOA
+markup:
+  defaultMarkdownHandler: "goldmark"
+  goldmark:
+    renderer:
+      unsafe: true
