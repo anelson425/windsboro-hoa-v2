@@ -7,20 +7,13 @@ description = "These are the HOA contacts"
 <!-- Please contacted the general inbox at: {{< general_contact >}} -->
 
 
-
 <div align="center">
-    <table>
-    <thead>
-    <tr>
-    <th>Board Members</th>
-    <th>Committee Members</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>{{< contacts "contacts" "board_members" >}}</td>
-    <td>{{< contacts "contacts" "committee_members" >}}</td>
-    </tr>
-    </tbody>
-    </table>
+    <div style="width: 50%; float: left;"> 
+        <h3>Board Members</h3>
+        {{< contacts "contacts" "board_members" >}}
+    </div>
+    <div style="margin-left: 50%;"> 
+        <h3>Committee Members</h3>
+        {{< contacts "contacts" "committee_members" >}}
+    </div>
 </div>

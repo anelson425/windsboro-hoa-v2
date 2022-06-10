@@ -1,23 +1,5 @@
-div.footer {
-    clear: both;
-    border-top: 1px solid #a0a0a0;
-    padding-top: 10px;
-    margin-top: 25px;
-    padding-bottom: 25px;
-    font-family: $sans-serif;
-  
-    p {
-      text-transform: uppercase; 
-      font-size: 8pt;
-    }
-  }
-
-div.mail {
-  background-color: white;
-  border: 1px solid #909090;
-  padding: 20px;
-  overflow: hidden;
-  display: inline-block;
+.content {
+  padding-top: 20px;
 }
 
 div.gallery {
