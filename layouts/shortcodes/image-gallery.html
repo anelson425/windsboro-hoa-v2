@@ -8,6 +8,7 @@
 
 {{ $dir := .Params.gallery_dir }}
 <ul class="image-gallery">
+  Thins
 {{ range (readDir (printf "assets/%s" $dir)) }}
   {{- $image := resources.Get (printf "%s/%s" $dir .Name) -}}
   {{- $imageurl := printf "/%s/%s" $dir .Name -}}

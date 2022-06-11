@@ -1,6 +1,6 @@
-{{ $data_file := index .Site.Data (.Get 0) }}
+{{ $data_file := index .Site.Data .Params.file_name }}
 
-{{ $data := index $data_file (.Get 1) }}
+{{ $data := index $data_file .Params.contact_type }}
 
 <div>
     {{ range $data  }}
