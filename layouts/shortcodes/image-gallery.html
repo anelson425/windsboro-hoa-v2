@@ -6,19 +6,22 @@
     .image-gallery li a img {width: 100%; display: block;}
 </style>
 
-{{ $dir := .Params.gallery_dir }}
+
+{{ $dir := "images/gallery" }}
+{{ $data_file := index .Site.Data "images" }}
+{{ $data := index $data_file "gallery" }}
+
 <ul class="image-gallery">
-  Thins
-{{ range (readDir (printf "assets/%s" $dir)) }}
-  {{- $image := resources.Get (printf "%s/%s" $dir .Name) -}}
-  {{- $imageurl := printf "/%s/%s" $dir .Name -}}
-  {{- $imagetitle := index (split .Name ".") 0 -}}
+
+  {{ range $data }}
+    {{- $image := resources.Get (printf "%s/%s" $dir .file_name) -}}
+    {{- $imagetitle := index (split .file_name ".") 0 -}}
+
     <li>
-      <a href="{{ ($image.Fit "1600x1600 q50").Permalink }}" title="{{ $imagetitle }}" class="lightbox-image">
+      <a href="{{ ($image.Fit "1600x1600 q50").Permalink }}" title="{{ $imagetitle }}" class="lightbox-image" target="_blank">
         <img src="{{ ($image.Fill "300x300 q50").Permalink }}" alt="{{ $imagetitle }}" title="{{ $imagetitle }}">
-        <span>{{ $imagetitle }}</span>
+        <span>{{ .description }}</span>
       </a>
     </li>
-  
-{{ end }}
+  {{ end }}
 </ul>
