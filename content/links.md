@@ -3,4 +3,6 @@ title = "Links"
 description = "Links"
 +++
 
-Still gotta do this
+<div align="center">
+    {{< links >}}
+</div>
