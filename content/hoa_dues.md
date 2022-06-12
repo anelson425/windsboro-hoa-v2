@@ -13,7 +13,7 @@ description = "HOA Dues"
     }
 </style>
 
-The Windsboro HOA dues are $400 per year. Payment is due in full by March 31 each year. You must pay by a mailed check to the following address:
+The Windsboro HOA dues are $400 per year. Dues for 2022 are due on March 31, 2022. You must pay by a mailed check to the following address:
 
 <div class="mail">
     Windsboro HOA Treasurer<br />
